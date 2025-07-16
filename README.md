@@ -47,7 +47,7 @@ This PHP command-line application reads a fixed-width log file (`sample-log.txt`
     * `BytesRX`   → Position 27, Length 8
     * `DateTime`  → Position 35, Length 17
 
-2. **Whitespace Removal** from all field values using `trim()` and `str_replace()`.
+2. **Whitespace Removal** from all field values using `trim()`.
 
 3. **Number Formatting** of `BytesTX` and `BytesRX` using `number_format()` with commas.
 
@@ -70,12 +70,10 @@ This PHP command-line application reads a fixed-width log file (`sample-log.txt`
 | `file()`                       | Reads the log file line by line into an array                |
 | `substr()`                     | Extracts substrings based on fixed-width character positions |
 | `trim()`                       | Removes extra whitespace from the fields                     |
-| `str_replace()`                | Removes or replaces spaces or characters inside a string     |
 | `number_format()`              | Formats numbers with thousand separators                     |
 | `DateTime::createFromFormat()` | Parses the original datetime string into a DateTime object   |
 | `format()`                     | Outputs the `DateTime` object into a new formatted string    |
 | `array_unique()`               | Filters out duplicate UserIDs                                |
-| `sort()` and `usort()`         | Used to sort arrays (IDs, UserIDs) properly                  |
 | `file_put_contents()`          | Writes the final result to `sample-output.txt`                      |
 
 ---
